@@ -2,6 +2,11 @@ name: Manual trigger sample
 
 on:
   workflow_dispatch:
+    inputs:
+      exit_code:
+        description: 'exit code'
+        required: true
+        default: '0'
     description: 'sample'
 
 jobs:
@@ -9,5 +14,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Set versions
-      run: echo "manual trigger sample"
+    - run: echo "Repo name is ${{ github.event.repository.name }}"
+    - run: bash exit_with_args.bash "${{ github.event.inputs.exit_code }}"
+
