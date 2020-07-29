@@ -15,5 +15,5 @@ jobs:
 
     steps:
     - run: echo "Repo name is ${{ github.event.repository.name }}"
-    - run: bash exit_with_args.bash "${{ github.event.inputs.exit_code }}"
+    - run: ./exit_with_args.bash "${{ github.event.inputs.exit_code }}"
 
