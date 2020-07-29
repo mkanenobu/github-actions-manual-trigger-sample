@@ -1,8 +1,8 @@
 name: Manual trigger sample
 
 on:
-  push:
-    branches: [ master ]
+  workflow_dispatch:
+    description: 'sample'
 
 jobs:
   maual-trigger-sample:
