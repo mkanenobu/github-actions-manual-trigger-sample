@@ -1,0 +1,13 @@
+name: Manual trigger sample
+
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+  maual-trigger-sample:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Set versions
+      run: echo "manual trigger sample"
