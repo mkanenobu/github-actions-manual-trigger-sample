@@ -2,11 +2,6 @@ name: Manual trigger sample
 
 on:
   workflow_dispatch:
-    inputs:
-      exit_code:
-        description: 'exit code'
-        required: true
-        default: '0'
     description: 'sample'
 
 jobs:
@@ -14,7 +9,5 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v1
     - run: echo "Repo name is ${{ github.event.repository.name }}"
-    - run: ./exit_with_args.bash "${{ github.event.inputs.exit_code }}"
 
