@@ -1,4 +1,4 @@
-name: Manual trigger sample
+name: Manual trigger with inputs
 
 on:
   workflow_dispatch:
